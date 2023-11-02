@@ -1,0 +1,18 @@
+const fs = require('fs');
+const process = require('process');
+//方式一：redFIle
+// let data = fs.readFileSync('./组合字符串.mp4');
+// fs.writeFileSync('./组合字符串2.mp4', data);
+// console.log(process.memoryUsage()); //看rss就行
+//方式二：流式操作
+const rs = fs.createReadStream('./组合字符串.mp4');
+const ws = fs.createWriteStream('./组合字符串3.mp4');
+// rs.on('data', chunk => {
+//     ws.write(chunk);
+// })
+
+// rs.on('end', () => {
+//     console.log(process.memoryUsage()); //看rss就行
+// })
+//方式二简写
+rs.pipe(ws);
