@@ -1,0 +1,17 @@
+const fs = require('fs');
+
+const files = fs.readdirSync('./');
+
+console.log(files);
+
+files.forEach(item => {
+    let data = item.split('_');
+    let [a, b, c] = data;
+    console.log(a, b, c);
+    if (Number(a) < 10) {
+        a = '0' + a;
+    }
+    let newName = a + '_' + b + '_' + c;
+    console.log(newName);
+    fs.renameSync(`./${item}`, `./${newName}`);
+})

@@ -124,3 +124,33 @@ fs.createWriteStream(path[,options]);
 	当需要持久化保存数据时，就要想到文件写入
 ```
 
+文件读取
+
+```txt
+fs.readFile(path[,options],callback)  异步读取
+参数：
+	path:文件路径
+	options:选项配置
+	callback:回调函数
+let data = fs.readFileSync(path)      同步读取
+参数：
+	path:文件路径
+应用场景：
+	电脑开机
+	程序运行
+	编辑器打开
+	查看图片
+	播放视频
+	播放音乐
+	git查看日志
+	上传文件
+	查看聊天记录
+```
+
+文件重命名和移动
+
+```txt
+同步：fs.rename(oldpath,newPath,callback)
+异步：fs.renameSync(oldpath,newPath)
+```
+
