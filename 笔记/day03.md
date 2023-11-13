@@ -35,3 +35,5 @@ path.dirname		获取路径的目录名
 path.extname		获取路径的扩展名
 ```
 
+**http协议**
+
