@@ -2,9 +2,6 @@ td {
     padding: 20px 40px;
 }
 
-
-/* 哈哈哈哈 */
-
 table tr:nth-child(odd) {
     background-color: #aef;
 }
